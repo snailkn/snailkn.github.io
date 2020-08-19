@@ -73,7 +73,7 @@ $ su - postgres
 
 把安装好的目录加到 `PATH` 里，我们需要修改 `.profile` 或 `.bash_profile`文件，增加如下两行
 
-```
+```bash
 PATH=/usr/local/pgsql/bin:$PATH
 export PATH
 ```

@@ -10,8 +10,10 @@
 ```
 Settings/Preferences -> Tools -> Python Integrated Tools -> Default Test Runner ->  (select) py.test
 ```
+
 - 安装pytest 及 coverage
-```
+
+```bash
 pip3 install pytest
 pip3 install coverage
 ```
@@ -21,6 +23,7 @@ pip3 install coverage
 根据需求编写flask api接口函数，一个基本的接口函数如下
 
 - api.py
+
 ```python3
 @app.route('/api/test', methods=['GET'])
 def first_api():
@@ -33,6 +36,7 @@ def first_api():
 接口写好后，我们可以根据接口的定义（应该接收什么，返回什么，什么时候报什么样的错等）编写测试用例。当然，在编写接口之前先写测试用例也是一个不错的选择，这样你可以清楚得定义接口要实现的功能，在具体实现时拥有更清晰的思路。我们一般会新建一个测试文件，然后定义一个全局的client，然后在每个测试函数中调用这个全局变量。在创建测试文件时，一般用 `'test_'` 加文件名／函数名来表明要测试的对象。以下为代码实例：
 
 - test_api.py
+
 ```python3
 import pytest
 import api
@@ -58,6 +62,7 @@ def test_first_api(client):
 ### 5. 补充说明
 
 在配置时我遇到了无法显示 Run py.test 选项的情况，这可能是ide配置未做刷新引起的，只要删除在项目根目录下的 `.idea` 文件并重启pycharm即可解决 
+
 ```bash
 rm -rf .idea
 ```

@@ -8,7 +8,9 @@
 ### 实现方案
 #### 1. 安装python库 [seqlog](https://github.com/tintoy/seqlog) ，这是一个实现python log 可以自动传到Seq服务器的工具
 
-`pip3 install seqlog`
+```bash
+pip3 install seqlog
+```
 
 #### 2. 根据seqlog的文档进行logging配置，我们采用了配置文件的方式，其内容如下：
 
@@ -89,12 +91,16 @@ if __name__ == '__main__':
 OK，现在万事大吉，我们可以把程序部署在服务器上运行了。但我们惊奇的发现，在测试环境中勤勤恳恳的日志信息在此时人间蒸发，踪迹难寻。那到底是哪里出了问题呢？
 此时我们当然是去找gunicorn的文档问个究竟。
 
-```Logging can be configured by using various flags detailed in the configuration documentation or by creating a logging configuration file balabala...```
+```
+Logging can be configured by using various flags detailed in the configuration documentation or by creating a logging configuration file balabala...
+```
 
 问题大致找到了，gunicorn会对logging重新进行配置，这就覆盖了我们之前辛苦配置的seqlog。继续在网上查找，我们找到了关掉这个功能的办法：
 在启动gunicorn时添加参数 `--access-logfile=-`，完整命令如下
 
-`gunicorn --workers=3 --bind 0.0.0.0:5000 --access-logfile=- app.wsgi:app`
+```bash
+gunicorn --workers=3 --bind 0.0.0.0:5000 --access-logfile=- app.wsgi:app
+```
 
 好了，让我们看一下，线上产生的log信息重新出现在了Seq页面，麻麻再也不用担心出了bug找不到原因了。
 
