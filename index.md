@@ -1,41 +1,29 @@
-## Welcome to GitHub Pages
+## SNAILKN
 
-You can use the [editor on GitHub](https://github.com/snailkn/snailkn.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+snailkn的一些编程笔记
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### python和数据科学
 
-test
+- [Numpy中rand和randn的区别](docs/rand_randn.md)
 
-[test](test.md)
+- [DeepSurv及其损失函数的pytorch实现](docs/negative_average_log_likelihood_loss.md)
 
-### Markdown
+- [Python浮点数的精度问题以及判断两个float数字是否相等](docs/python3_float_equal.md)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### 框架踩坑总结
 
-```markdown
-Syntax highlighted code block
+- [在bash中引用json文件记录的参数](docs/export_json_var_in_bash.md)
 
-# Header 1
-## Header 2
-### Header 3
+- [R package 的离线环境迁移](docs/r_lib_migration.md)
 
-- Bulleted
-- List
+- [Python Package 的离线环境迁移](docs/python_lib_migration.md)
 
-1. Numbered
-2. List
+- [用The-littlest-jupyterhub搭建线上jupyter服务器](docs/the-littlest-jupyterhub.md)
 
-**Bold** and _Italic_ and `Code` text
+- [JS - AST基本概念](docs/js_ast.md)
 
-[Link](url) and ![Image](src)
-```
+- [在ubuntu使用源码安装和配置PostgreSQL](docs/install_pg_by_source_code.md)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+- [利用pycharm+pytest测试flask接口](docs/pytest-flask-app-with-pycharm.md)
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/snailkn/snailkn.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- [flask-gunicorn-seqlog 实现python api服务日志自动更新到Seq](docs/flask-gunicorn-seqlog.md)
